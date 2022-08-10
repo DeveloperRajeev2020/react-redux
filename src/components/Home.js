@@ -1,14 +1,11 @@
 import React from 'react';
 import ImgClass from '../iphone.png';
 
-function Home() {
+function Home(props) {
+  console.warn("Home props",props);
     return (
         <div>
-            <div className="add-to-cart">
-                 {/* <span className="cart-count">{props.data.length}</span> */}
-                <img alt="add to cart" src="https://static.vecteezy.com/system/resources/thumbnails/000/496/007/small/Ecommerce_998.jpg" />
-            </div>
-            <h1>Home Component</h1>
+            <h1>React with Redux using different components</h1>
             <div className="cart-wrapper">
                 <div className="img-wrapper item">
                   <img src={ImgClass} alt="iphone" />
@@ -22,7 +19,9 @@ function Home() {
                     </span>
                 </div>
                 <div className="btn-wrapper item">
-                    <button>Add To Cart</button>
+                    <button onClick={()=>props.addToCartHandler({price: 1000,name: 'I phone 11'})}>Add To Cart</button>
+                    <button className="remove-cart-button" onClick={()=>props.removeToCartHandler()}>Remove To Cart</button>
+
                 </div>
             </div>
         </div>

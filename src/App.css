@@ -47,10 +47,10 @@
     margin-left: 10%;
 }
 .item {
-  float: left;
   display: inline-block;
+  float: left;
   width: 120px;
-  padding: 20px;
+  padding: 14px;
   height: 70px;
 }
 .add-to-cart img{
@@ -71,6 +71,10 @@
     height: 20px;
     border-radius: 50%;
     color: #fff;
+}
+button.remove-cart-button{
+   background-color: rebeccapurple;
+   margin-top: 8px;
 }
 /*  */
 @keyframes App-logo-spin {
